@@ -4,8 +4,8 @@ import java.util.HashSet;
 
 public class SudokuValidator {
 	
-	public boolean isValidSudoku(int[][] sudokuArray) {
-		HashSet<String> validSet = new HashSet<>();
+	public boolean isValidSudoku(int[][] sudokuArray, HashSet<String> validSet) {
+		
 		int number=0,length = sudokuArray.length;
 		for(int row=0;row<length;row++) {
 			for(int column=0;column<length;column++) {
@@ -38,9 +38,9 @@ public class SudokuValidator {
 								{8,5,3,9,4,1,7,6,2},
 								{9,6,2,7,5,3,4,1,0}
 							  };
-		
+		HashSet<String> validSet = new HashSet<>();
 		SudokuValidator validator = new SudokuValidator();
-		System.out.println(validator.isValidSudoku(sudokuArray));
+		System.out.println(validator.isValidSudoku(sudokuArray,validSet));
 	}	
 
 }
